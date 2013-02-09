@@ -8,7 +8,7 @@ app.config["MONGO_PORT"] = 10042
 app.config["MONGO_USERNAME"] = "hello"
 app.config["MONGO_PASSWORD"] = "world"
 app.config["SECRET_KEY"] = "KeepThisS3cr3t"
-db = PyMongo(app)
+mongo = PyMongo(app)
 
 @app.route('/')
 def index():
@@ -16,7 +16,14 @@ def index():
 
 @app.route('/submit')
 def submit():
-    return 'Submit Your Cat'
+    post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat"
+            }
+    print(post)
+    posts = mongo.db.posts
+    print("is this showing")
+    post_id = posts.insert(post)
+    print(post_id)
+    return str(post_id)
 
 if __name__ == '__main__':
     app.run()
