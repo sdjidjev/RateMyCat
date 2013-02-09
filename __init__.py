@@ -12,18 +12,20 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return 'Rate My Cats'
+    return render_template('ratemycat.html')
 
 @app.route('/submit')
 def submit():
     post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat"
             }
-    print(post)
     posts = mongo.db.posts
-    print("is this showing")
-    post_id = posts.insert(post)
-    print(post_id)
+    post_id = posts.insert(post))
     return str(post_id)
 
+@app.route('/cat')
+def cat():
+    posts = mongo.db.posts
+    find = posts.find_one({"author": "Mike"})
+    #LEARN TEMPLATING
 if __name__ == '__main__':
     app.run()
