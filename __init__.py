@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, abort
 from flask.ext.pymongo import PyMongo
-
+from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = "cats"
@@ -29,13 +29,13 @@ def submit():
         return render_template('submit.html')
 
 @app.route('/cat/<post_id>')
-def cat(post_id):
-    post = mongo.db.post.find_one(_id = post_id)
+def show_post(post_id):
+    post = mongo.db.posts.find_one({"_id" :ObjectId(post_id)})
     if post is not None:
         return render_template('ratemycat.html', post=post)
     else:
         return abort(404)
-        
+
 app.debug = True
 
 if __name__ == '__main__':
