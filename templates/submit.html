@@ -1,10 +1,21 @@
 <html>
-<body>
+<head>
+	 <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	 <link href="submit.css" type="text/css" rel="stylesheet" />
+	 <title> Submit </title>
+</head>
+<body background = 'http://i.imgur.com/G1DbdOa.png' bgproperties = "fixed">
 	<form name="input" action="/submit" method="post">
-		Author: <input type="text" name="author"><br>
-		Title:&nbsp;   <input type="text" name="title"><br>
-		Text: &nbsp;  <input type ="text" name = "text"> <br>
-		Cat:  &nbsp;      <input type ="text" name = "cat"><input type="submit" value="Submit"> <br>
+		<div class = 'table' id = 'submittable'>
+  			<table>
+				Author <input type="text" name="author" class="input" /><br>     
+				Title&nbsp; &nbsp; &nbsp; <input type="text" name="title" class="input" /><br>
+				Text &nbsp; &nbsp; <input type ="text" name = "text" class="input" /> <br>
+				Cat &nbsp;    &nbsp;  <input type ="text" name = "cat" class="input" />
+				<table><div class = 'table' id = 'buttontable'>
+					<input type="submit" value= "Submit"  class="button">
+				</table>
+			</table> 
 	</form>
 </body>
 </html>
