@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="static/ratemycat.css">
+    <link rel="stylesheet" type="text/css" href="static/index.css">
     <title>Rate My Cat</title>
 </head>
 <body>
     <h1>Rate My Cat</h1>
     <ul>
     {% for post in posts %}
-    <img src= "{{post.cat}}" width= 300px></img>
+    <a href= ""><img src= "{{post.cat}}" width= 300px height = 300px</img></a>
     {% endfor %}
 </ul>
 </body>

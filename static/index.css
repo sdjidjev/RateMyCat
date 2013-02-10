@@ -1,0 +1,13 @@
+h1 {
+    font-size: 500%;
+    font-family: Helvetica;
+    color: #1f261d;
+    text-align: center;
+}
+
+body ul img{
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
