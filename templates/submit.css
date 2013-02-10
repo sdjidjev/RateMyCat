@@ -1,0 +1,49 @@
+#table{
+	font-family: 'Roboto', sans-serif;
+}
+
+#submittable{
+	position: absolute;
+	background-color: brown;
+	left: 560px;
+	top: 25%;
+	width:  170px;
+	height: 300px;
+	padding: 20;
+	font-family: 'Roboto', sans-serif;
+}
+
+#buttontable{
+	background-color: brown;
+	position: absolute;
+	left: 80;
+	top: 300px;
+	
+}
+
+.input{
+	display: block;
+    width: 150px;
+    float: center;
+    text-align: left;
+    border: 1px solid #660000;
+    background: #ffc;
+}
+
+.input:hover {
+    border: 1px solid #f00;
+    background: #ff6;
+}
+
+.button{
+	border: 1px solid #660000;
+    background: #ffc;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.button:hover{
+	border: 1px solid #f00;
+    background: #ff6;
+}
+
