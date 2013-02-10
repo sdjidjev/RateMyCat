@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="static/ratemycat.css">
+    <title>Rate My Cat</title>
+</head>
+<body>
+    <h1>Rate My Cat</h1>
+    <ul>
+    {% for post in posts %}
+    <img src= "{{post.cat}}" width= 300px></img>
+    {% endfor %}
+</ul>
+</body>
+</html>

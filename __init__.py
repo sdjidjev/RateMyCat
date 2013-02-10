@@ -14,7 +14,8 @@ mongo = PyMongo(app)
 
 @app.route('/')
 def index():
-    return render_template('ratemycat.html')
+    posts = mongo.db.posts.find()
+    return render_template('index.html', posts = posts)
 
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
