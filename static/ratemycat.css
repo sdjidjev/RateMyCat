@@ -13,11 +13,11 @@ body h1{
 	left:25%;
 	position: relative;
 	color: #1f261d;
+	background-color: #FFFFFF;
+	border-radius: 10px;
 }
 body h2{
 	color: #1f261d;
-	background-color: #FFFFFF;
-	border-radius: 10px;
 	width:25%;
 	left:37.5%;
 	position: relative;
