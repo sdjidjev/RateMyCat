@@ -27,7 +27,7 @@ def submit():
         post_id = posts.insert(post)
         return redirect('/cat/' + str(post_id))
     else:
-        return render_template('submit.html', 'submit.css')
+        return render_template('submit.html')
 
 @app.route('/cat/<post_id>')
 def show_post(post_id):
