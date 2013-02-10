@@ -9,7 +9,7 @@
     <h1>Rate My Cat</h1>
     <ul>
     {% for post in posts %}
-    <a href= ""><img src= "{{post.cat}}" width= 300px height = 300px</img></a>
+    <a href= "/cat/{{post._id}}"><img src= "{{post.cat}}" width= 300px height = 300px</img></a>
     {% endfor %}
 </ul>
 </body>
