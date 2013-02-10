@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, abort
 from flask.ext.pymongo import PyMongo
 
 
@@ -19,20 +19,23 @@ def index():
 @app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
-        return _submit(request.form['author'],
-        request.form['title'],
-        request.form['text'],
-        request.form['cat'])
+        post = {"author": request.form['author'], 
+        "title": request.form['title'], "text": request.form['text'], "cat":
+        request.form['cat']}
+        posts = mongo.db.posts
+        post_id = posts.insert(post)
+        return redirect('/cat/' + str(post_id))
     else:
         return render_template('submit.html')
 
-@app.route('/cat')
-def cat():
-    post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat", "cat": "http://i.imgur.com/0Dr09BI.jpg"}
-    posts = mongo.db.posts
-    post_id = posts.insert(post)
-    return render_template('ratemycat.html', post=post)
-
+@app.route('/cat/<post_id>')
+def cat(post_id):
+    post = mongo.db.post.find_one(_id = post_id)
+    if post is not None:
+        return render_template('ratemycat.html', post=post)
+    else:
+        return abort(404)
+        
 app.debug = True
 
 if __name__ == '__main__':
