@@ -16,17 +16,16 @@ mongo = PyMongo(app)
 def index():
     return render_template('ratemycat.html')
 
-@app.route('/submit')
+@app.route('/submit', method=['GET', 'POST'])
 def submit():
-    post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat"
-            }
-    posts = mongo.db.posts
-    post_id = posts.insert(post)
-    return render_template('ratemycat.html', post=post)
+    if request.method == 'POST':
+        pass
+    else:
+        return render_template #MAKE FORM TEMPLATE
 
 @app.route('/cat')
 def cat():
-    post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat"}
+    post = {"author": "Mike", "title": "Cat", "text": "here is my awesome cat", "cat": "http://i.imgur.com/0Dr09BI.jpg"}
     posts = mongo.db.posts
     post_id = posts.insert(post)
     return render_template('ratemycat.html', post=post)
