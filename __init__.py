@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask.ext.pymongo import PyMongo
 
 
@@ -16,12 +16,15 @@ mongo = PyMongo(app)
 def index():
     return render_template('ratemycat.html')
 
-@app.route('/submit', method=['GET', 'POST'])
+@app.route('/submit', methods=['GET', 'POST'])
 def submit():
     if request.method == 'POST':
-        pass
+        return _submit(request.form['author'],
+        request.form['title'],
+        request.form['text'],
+        request.form['cat'])
     else:
-        return render_template #MAKE FORM TEMPLATE
+        return render_template('submit.html')
 
 @app.route('/cat')
 def cat():
