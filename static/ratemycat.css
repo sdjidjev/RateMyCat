@@ -2,16 +2,19 @@
 body {
 	font-family: 'Roboto', sans-serif;
     background-repeat:repeat;
+    text-align: center;
+    background-color: #FFFFFF
 }
 
-h1{
-	background-color: #FFFFFF;
+body h1{
 	border-radius: 10px;
 	width:50%;
 	left:25%;
 	position: relative;
+	color: #1f261d;
 }
 h2{
+	color: #1f261d;
 	background-color: #FFFFFF;
 	border-radius: 10px;
 	width:25%;
