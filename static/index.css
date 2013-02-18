@@ -11,3 +11,30 @@ body ul img{
     padding-top: 2px;
     padding-bottom: 2px;
 }
+.button{
+	position:relative;
+	float: left;
+	border: 1px solid #660000;
+    background: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align-align: center;
+}
+
+.button:hover
+{
+	border: 1px solid #f00;
+	background: #FFCCCC;
+}
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+
+
+a {
+padding-top:5px;
+padding-bottom:5px;
+padding-right:13px;
+padding-left:13px;}
