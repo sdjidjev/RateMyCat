@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect, abort
 from flask.ext.pymongo import PyMongo
-from Flask-PyMongo import PyMongo
+#from Flask-PyMongo import PyMongo
 from bson.objectid import ObjectId
 from pymongo import ASCENDING, DESCENDING
 
