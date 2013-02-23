@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, abort
-#from flask.ext.pymongo import PyMongo
+from flask.ext.pymongo import PyMongo
 from Flask-PyMongo import PyMongo
 from bson.objectid import ObjectId
 from pymongo import ASCENDING, DESCENDING
@@ -43,4 +43,5 @@ def show_post(post_id):
 app.debug = True
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     app.run(host='0.0.0.0', port=80)
