@@ -1,5 +1,6 @@
 #table{
 	font-family: 'Roboto', sans-serif;
+
 }
 
 #submittable{
@@ -11,6 +12,7 @@
 	height: 300px;
 	padding: 20;
 	font-family: 'Roboto', sans-serif;
+    color: #cc6c6c;
 }
 
 #buttontable{
@@ -27,7 +29,8 @@
     float: center;
     text-align: left;
     border: 1px solid #660000;
-    background: white;
+    background: #f9dada;
+    color: #cc6c6c;
 }
 
 .input:hover {
@@ -39,38 +42,38 @@
 	border: 1px solid #660000;
     background: white;
     font-family: 'Roboto', sans-serif;
+    color: #cc6c6c;
+    background: #f9dada;
 
 }
 
 .button:hover{
 	border: 1px solid #f00;
 	background: #FFCCCC;
+    color: #cc6c6c;
+
 }
 
 .homebutton{
 	position:relative;
 	float: left;
 	border: 1px solid #660000;
-    background: #FFFFFF;
+    background: #f9dada;
     font-family: 'Roboto', sans-serif;
     width: 80px;
     height: 30px;
     margin-right: 10px;
     vertical-align-align: center;
+    border: 1px solid #f00;
 }
 
 .homebutton:hover
 {
 	border: 1px solid #f00;
 	background: #FFCCCC;
+    border: 1px solid #f00;
 }
 
-a:link {text-decoration:none;}
-a:visited {text-decoration:none;}
+a:link {text-decoration:none; color: #cc6c6c;}
+a:visited {text-decoration:none; color: #cc6c6c;}
 
-
-a {
-padding-top:5px;
-padding-bottom:5px;
-padding-right:13px;
-padding-left:13px;}
