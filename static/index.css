@@ -29,6 +29,7 @@ h2 {
     height: 30px;
     margin-right: 10px;
     vertical-align: center;
+    transition: background .1s ease-in;
 }
 
 .button:hover
