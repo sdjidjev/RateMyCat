@@ -11,8 +11,9 @@
     <a href= "/submit" class = "a"><button type="button" class = "button">Submit</button></a></h2>
     <h1>Rate My Cat</h1>
     <ul>
+    <div class = "img">
     {% for post in posts %}
-    <a href= "/cat/{{post._id}}"><img src= "{{post.cat}}" ></img></a>
+    <a href= "/cat/{{post._id}}"><img src= "{{post.cat}}" ></img></a></div>
     {% endfor %}
 </ul>
 </body>
