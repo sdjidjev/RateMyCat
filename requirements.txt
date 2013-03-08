@@ -7,3 +7,4 @@ distribute==0.6.28
 pymongo==2.4.2
 wsgiref==0.1.2
 yolk==0.4.3
+gunicorn==0.17.2
