@@ -6,8 +6,9 @@
 #submittable{
 	position: absolute;
 	background-color: brown;
-	left: 560px;
+	left: 50%;
 	top: 25%;
+	margin-left: -105px;
 	width:  170px;
 	height: 300px;
 	padding: 20;
